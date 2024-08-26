@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杜宏成の個人ウェブページ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4a90e2; /* 复古蓝色 */
+            padding: 10px 20px;
+            text-align: right;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+        header nav button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #4a90e2;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #4a90e2;
+            color: white;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll("[lang]");
+            elements.forEach(element => {
+                element.style.display = element.lang === lang ? "block" : "none";
+            });
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            changeLanguage('ja'); // 设置日语为默认语言
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <button onclick="changeLanguage('ja')">日本語</button>
+            <button onclick="changeLanguage('zh')">中文</button>
+            <button onclick="changeLanguage('en')">English</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 lang="ja">杜宏成の個人ウェブページ</h1>
+        <h1 lang="zh" style="display: none;">杜宏成的个人网页</h1>
+        <h1 lang="en" style="display: none;">Du Hongcheng's Personal Webpage</h1>
+
+        <p lang="ja">こんにちは、私は杜宏成です。現在、広島大学の学生です。</p>
+        <p lang="zh" style="display: none;">您好，我是杜宏成，目前是广岛大学的学生。</p>
+        <p lang="en" style="display: none;">Hello, I am Du Hongcheng, currently a student at Hiroshima University.</p>
+
+        <h2 lang="ja">連絡先</h2>
+        <h2 lang="zh" style="display: none;">联系方式</h2>
+        <h2 lang="en" style="display: none;">Contact Information</h2>
+
+        <ul>
+            <li lang="ja">電話番号: 070-9042-9213</li>
+            <li lang="zh" style="display: none;">电话: 070-9042-9213</li>
+            <li lang="en" style="display: none;">Phone: 070-9042-9213</li>
+
+            <li lang="ja">メール: <a href="mailto:morikousei.suketomo@gmail.com">morikousei.suketomo@gmail.com</a></li>
+            <li lang="zh" style="display: none;">邮箱: <a href="mailto:morikousei.suketomo@gmail.com">morikousei.suketomo@gmail.com</a></li>
+            <li lang="en" style="display: none;">Email: <a href="mailto:morikousei.suketomo@gmail.com">morikousei.suketomo@gmail.com</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>© 2024 杜宏成</p>
+    </footer>
+</body>
+</html>
